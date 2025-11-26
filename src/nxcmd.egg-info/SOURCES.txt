@@ -1,9 +1,0 @@
-pyproject.toml
-src/nxcmd/__init__.py
-src/nxcmd/cli.py
-src/nxcmd/model.py
-src/nxcmd.egg-info/PKG-INFO
-src/nxcmd.egg-info/SOURCES.txt
-src/nxcmd.egg-info/dependency_links.txt
-src/nxcmd.egg-info/entry_points.txt
-src/nxcmd.egg-info/top_level.txt
