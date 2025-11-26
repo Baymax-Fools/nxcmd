@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nxcmd"
+version = "0.1.0"
+description = "A local world model for your shell: predicts your next command"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Your Name", email = "you@example.com"}]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+nxcmd = "nxcmd.cli:main"
+
+[tool.setuptools]
+package-dir = {"nxcmd" = "src/nxcmd"}
+packages = {find = {where = ["src"]}}

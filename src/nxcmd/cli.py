@@ -1,8 +1,9 @@
-# nextcmd/cli.py
+# src/nxcmd/cli.py
 import sys
 import json
 from pathlib import Path
-from model import LocalWorldModel
+from .model import LocalWorldModel
+
 
 def get_recent_commands(n=2):
     """从日志末尾读取最近 n 条命令（排除 nextcmd 自身）"""
@@ -42,19 +43,19 @@ def clean_command(raw_cmd):
 def show_help():
     """显示帮助信息"""
     print("""
-🔮 NextCmd - 智能命令预测工具
+🔮 NxCmd - 智能命令预测工具
 
 使用方法:
-  nextcmd suggest      # 基于最近命令预测下一个可能命令
-  nextcmd simulate <cmd>  # 模拟在指定命令后的预测
-  nextcmd stats       # 显示模型统计信息
-  nextcmd demo        # 运行演示模式
-  nextcmd help        # 显示此帮助信息
+  nxcmd suggest      # 基于最近命令预测下一个可能命令
+  nxcmd simulate <cmd>  # 模拟在指定命令后的预测
+  nxcmd stats       # 显示模型统计信息
+  nxcmd demo        # 运行演示模式
+  nxcmd help        # 显示此帮助信息
 
 示例:
-  nextcmd suggest
-  nextcmd simulate "git add"
-  nextcmd stats
+  nxcmd suggest
+  nxcmd simulate "git add"
+  nxcmd stats
     """)
 
 def run_demo(model):
@@ -85,7 +86,7 @@ def run_demo(model):
             print(f"在命令 {' → '.join(context)} 后: 无预测结果")
         print()
 
-def cli_main():
+def main():
     """CLI 主入口函数"""
     if len(sys.argv) < 2 or sys.argv[1] in ['help', '--help', '-h']:
         show_help()
@@ -157,4 +158,4 @@ def cli_main():
         sys.exit(1)
 
 if __name__ == "__main__":
-    cli_main()
+    main()

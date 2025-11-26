@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# nextcmd/model.py
+# src/nxcmd/model.py
 import json
 from pathlib import Path
 from collections import defaultdict, Counter
