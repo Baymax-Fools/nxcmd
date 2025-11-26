@@ -21,12 +21,12 @@ wm_shell_log(){
     fi
 }
 '
-echo "$RECORD_CMD" >> $HOME/.bashrc
+# echo "$RECORD_CMD" >> $HOME/.bashrc
 
 if [[ -f "$HOME/.bashrc" ]]; then
     if ! grep -q "wm_shell_log" $HOME/.bashrc; then
         echo "$RECORD_CMD" >> $HOME/.bashrc
-        # 设置bash的 PROMRT_COMMAND 来捕获命令
+        # 设置bash的 PROMPT_COMMAND 来捕获命令
         echo 'export PROMPT_COMMAND="wm_shell_log \"\$(history 1 | sed \"s/^[]*[0-9]*[ ]*//\")\""' >> $HOME/.bashrc
         echo "Added to ~/.bashrc successfully"
     fi
