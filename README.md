@@ -17,7 +17,7 @@ NXCMD - 智能命令预测工具
 方法一：使用安装脚本
 bash
 ```
-git clone [<仓库地址>](https://github.com/Baymax-Fools/nxcmd.git)
+git clone https://github.com/Baymax-Fools/nxcmd.git
 
 cd nxcmd
 
