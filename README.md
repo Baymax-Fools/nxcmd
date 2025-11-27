@@ -16,7 +16,7 @@ NXCMD - 智能命令预测工具
 # 安装
 方法一：使用安装脚本
 bash
-# 克隆项目
+```
 git clone [<仓库地址>](https://github.com/Baymax-Fools/nxcmd.git)
 
 cd nxcmd
@@ -24,6 +24,8 @@ cd nxcmd
 ./install.sh
 
 source ~/.bashrc  # 或 source ~/.zshrc
+```
+
 方法二：使用 pip 安装
 bash
 # 从源码安装
